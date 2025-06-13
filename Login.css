@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1C1C1C;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    padding: 10vh 10vw;
+    gap: 10vw;
+}
+
+body img {
+    width: 20vw;
+    height: auto;
+}
+
+.container .login-form {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    color: #fbbf24;
+}
+
+.container .login-form h1,
+.container .login-form h4 {
+    text-align: center;
+}
+
+.container .login-form h1 {
+    font-size: 2.5rem;
+}
+
+.container .login-form h4 {
+    font-size: 2rem;
+}
+
+.container .login-form > div:not(:last-of-type) {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.container .login-form label {
+    font-size: 1rem;
+}
+
+.container .login-form div:not(:last-of-type) > input {
+    width: 40vw;
+    height: 4vh;
+    padding: 1vh 0.5vw;
+    font-size: 1rem;
+}
+
+.login-form .submit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit .remember {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.submit .remember input {
+    width: 1.2vw;
+}
+
+.submit > input {
+    width: 8vw;
+    height: 4vh;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-form p{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form a {
+    color: #fbbf24;
+}
+
+.login-form a:hover {
+    color: rgb(255, 216, 117);
+}
