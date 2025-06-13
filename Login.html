@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign In Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Login.css" rel="stylesheet">
+    </head>
+    <body>
+        <img src="img/dogLogin.png" alt="Dog Login">
+        <div class="container">
+            <form action="POST" class="login-form">
+                <div class="login-title">
+                    <h1>Welcome</h1>
+                    <h4>Login with your account</h4>
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email-field"
+                        placeholder="example@example.com">
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password-field"
+                        placeholder="password">
+                </div>
+                <div class="submit">
+                    <div class="remember">
+                        <input type="checkbox" name="remember-me"
+                            id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <input type="submit" value="submit">
+                </div>
+                <p>Dont have an account?&nbsp&nbsp&nbsp<a
+                        href="signin.html">register now</a></p>
+            </form>
+        </div>
+    </body>
+</html>
