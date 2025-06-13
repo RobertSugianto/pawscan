@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7761F3;
+    color: #ffffff;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+
+header .logo {
+    display: flex;
+    color: #fbbf24;
+    align-items: center;
+    padding-left: 2cm;
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  padding-right: 2rem;
+}
+
+nav ul li {
+  margin: 0 15px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #fbbf24;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+main{
+    background-color: #1C1C1C;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    padding-top: 3cm;
+    padding-bottom: 2cm;
+    color: #fbbf24;
+    font-size: 60px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.not-found-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-not-found{
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    width: 200px;
+    height: 200px;
+}
+
+.not-found{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+    padding-bottom: 2cm;
+}
+
+.back-button{
+    background-color: #D9D9D9;
+    color: #000000;
+    border: none;
+    padding: 20px 80px;
+    border-radius: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto serif', sans-serif;
+    font-weight: 550;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.back-button:hover{
+    background-color: #fbbf24;
+}
+
+.footer-section {
+    background-color: #7761F3;
+    color: #FFFFFF;
+    padding: 40px 0 0 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+
+.footer-section h1 { 
+    display: flex;
+    color: #fbbf24;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+}
+
+.footer-bottom p {
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 30vh;
+    height: auto;
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.footer-menu h3,
+.contact-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-info{
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Inter', 'sans-serif';
+    font-weight: normal;
+}
+
+.footer-menu ul li {
+    margin: 5px 0;
+}
+
+.footer-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    color: #fbbf24;
+}
+
+.contact-info .social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.contact-info .social-icons a {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-info .social-icons a:hover {
+    background-color: #fbbf24;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(71, 181, 71, 0.4);
+}
+
+.social-icon {
+    width: 4vh;
+    height: 4vh;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.contact-info .social-icons a:hover .social-icon {
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.footer-bottom {
+    background-color: #7761F3;
+    padding: 5px 1px;
+    color: #F5F5DC;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}

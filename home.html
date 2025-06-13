@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p><span class="paw">🐾</span> PawScan</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tutorial.html">How It Works</a></li>
+                <li><a href="history.html">My Scans</a></li>
+                <li><a href="login.html" class="active">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="intro" id="intro">
+            <h1>
+                PawScan
+            </h1>
+            <h3>
+                PawScan is a web-based app that uses AI to identify dog species from photos. Simply upload a picture, and the app analyzes 
+                its features. With a user-friendly design and extensive database, PawScan is perfect for pet lovers and playing outdoor enthusiasts!
+            </h3>
+            <button onclick="window.location.href='hasil.html'"class="identify-button">Identify</button>
+        </div>
+        <div class="tutorial" id="tutorial">
+            <h2 class="how-to">How to Use</h2>
+            
+                       <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Take a Photo:</div>
+                        <div class="step-description">Use the camera feature to take a clear photo of the dog, or select an existing image from your gallery.</div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Upload the Photo:</div>
+                        <div class="step-description">Tap the upload button to submit the photo for analysis.</div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">AI Analysis:</div>
+                        <div class="step-description">Wait a moment as the app's AI analyzes the dog's features.</div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">View Results:</div>
+                        <div class="step-description">Review the identified species and read additional information about the dog</div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Save or Share:</div>
+                        <div class="step-description">Save the identification or share it with friends and family.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tutorial-conclusion">
+                <h3>By following these steps, users can quickly and easily identify dog and enhance their knowledge of these dogs!</h3>
+            </div>
+        </div>
+    </main>
+
+     <footer class="footer-section">
+        <div class="footer-content">
+            <div class="logo-container">
+                <h1>
+                    🐾PawScan
+                </h1>
+            </div>
+            <div class="footer-menu">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li><a href="home.html#Home">Home</a></li>
+                    <li><a href="tutorial.html">Service</a></li>
+                    <li><a href="home.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><span class="icon">&#128222;</span> +62 123 456 7890</p>
+                <br>
+                <p><span class="icon">&#128205;</span> Jl. Pahlawan Seribu No.123, Tangerang Selatan – Banten, 15310</p>
+                <br>
+                <div class="social-icons">
+                    <a href="#"><img src="img/Facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="img/Instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="img/X.png" alt="Twitter" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PawScan| All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
