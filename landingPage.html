@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="landingPage.css">
 </head>
 <body>
     <header>
@@ -19,14 +19,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="#tutorial">How It Works</a></li>
-                <li><a href="history.html">My Scans</a></li>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#our-team">Our Team</a></li>
                 <li><a href="login.html" class="active">Sign In</a></li>
             </ul>
         </nav>
     </header>
-
 
     <main>
         <div class="intro" id="intro">
@@ -37,55 +36,64 @@
                 PawScan is a web-based app that uses AI to identify dog species from photos. Simply upload a picture, and the app analyzes 
                 its features. With a user-friendly design and extensive database, PawScan is perfect for pet lovers and playing outdoor enthusiasts!
             </h3>
-            <button onclick="window.location.href='hasil.html'"class="identify-button">Identify</button>
+            <button onclick="window.location.href='#services'"class="learn-more-button">Learn More</button>
         </div>
-        <div class="tutorial" id="tutorial">
-            <h2 class="how-to">How to Use</h2>
-            
-                       <div class="tutorial-steps">
-                <div class="tutorial-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <div class="step-title">Take a Photo:</div>
-                        <div class="step-description">Use the camera feature to take a clear photo of the dog, or select an existing image from your gallery.</div>
-                    </div>
+        <div class="services" id="services">
+            <h1>We Provide <span>Best</span> Services</h1>
+            <div class="cards">
+                <div class="card">
+                    <h2>AI Accuracy</h2>
+                    <p>
+                        Trained on thousands of dog images across hundreds of breeds using state-of-the-art deep learning models.
+                    </p>
                 </div>
-                
-                <div class="tutorial-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <div class="step-title">Upload the Photo:</div>
-                        <div class="step-description">Tap the upload button to submit the photo for analysis.</div>
-                    </div>
+                <div class="card">
+                    <h2>Instant</h2>
+                    <p>
+                        Upload or snap a photo — get fast and accurate dog breed identification in seconds.
+                    </p>
                 </div>
-                
-                <div class="tutorial-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <div class="step-title">AI Analysis:</div>
-                        <div class="step-description">Wait a moment as the app's AI analyzes the dog's features.</div>
-                    </div>
-                </div>
-                
-                <div class="tutorial-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <div class="step-title">View Results:</div>
-                        <div class="step-description">Review the identified species and read additional information about the dog</div>
-                    </div>
-                </div>
-                
-                <div class="tutorial-step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <div class="step-title">Save or Share:</div>
-                        <div class="step-description">Save the identification or share it with friends and family.</div>
-                    </div>
+                <div class="card">
+                    <h2>Insights</h2>
+                    <p>Learn about the breed's traits, behavior, and care tips instantly, including whether it's good for families, beginners, or apartment living.</p>
                 </div>
             </div>
+        </div>
+
+        <div class="our-team" id="our-team">
+            <h2>Our Teams</h2>
+            <div class="team-container">
+            <div class="team-member">
+                <img src="img/golden.jpeg" alt="John Doe">
+                <h4>John Doe</h4>
+                <p>Project Manager</p>
+            </div>
+            <div class="team-member"></div>
+            <div class="team-member">
+                <img src="img/golden.jpeg" alt="Mary Doe">
+                <h4>Mary Doe</h4>
+                <p>UI UX Designer</p>
+            </div>
+            <div class="team-member"></div>
+            <div class="team-member">
+                <img src="img/golden.jpeg" alt="Mary Doe">
+                <h4>Mary Doe</h4>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member"></div>
+            <div class="team-member">
+                <img src="img/golden.jpeg" alt="Mary Doe">
+                <h4>Mary Doe</h4>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member"></div>
+            <div class="team-member">
+                <img src="img/golden.jpeg" alt="John Doe">
+                <h4>John Doe</h4>
+                <p>Back End Engineer</p>
+            </div>
+            <div class="team-member"></div>
             
-            <div class="tutorial-conclusion">
-                <h3>By following these steps, users can quickly and easily identify dog and enhance their knowledge of these dogs!</h3>
             </div>
         </div>
     </main>
@@ -101,8 +109,8 @@
                 <h3>Main Menu</h3>
                 <ul>
                     <li><a href="#intro">Home</a></li>
-                    <li><a href="#tutorial">Service</a></li>
-                    <li><a href="history.html">My Scans</a></li>
+                    <li><a href="#tutorial">Services</a></li>
+                    <li><a href="#our-team">Our Team</a></li>
                 </ul>
             </div>
             <div class="contact-info">
