@@ -88,10 +88,16 @@ body img {
     cursor: pointer;
 }
 
-.login-form p{
+.login-form > p{
     font-size: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.login-form #email-warning,
+.login-form #password-warning {
+    display: none;
+    color: red;
 }
 
 .login-form a {
