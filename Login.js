@@ -30,4 +30,5 @@ const checkPassword = (value) => {
     if(value < 8) return false, "must atleast 8 character";
     if(pattern.test(value)) return false, "contain invalid characters";
 
+    return true;
 }
