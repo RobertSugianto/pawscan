@@ -9,26 +9,30 @@
     <body>
         <img src="img/dogLogin.png" alt="Dog signin">
         <div class="container">
-            <form action="home.html" method="POST" class="signin-form">
+            <form action="home.html" method="POST" class="signin-form" id="signin-form">
                 <div class="signin-title">
                     <h1>Welcome</h1>
                     <h4>Sign in with your account</h4>
                 </div>
                 <div class="email">
                     <label for="email-field">Email</label>
-                    <input type="text" name="email" id="email-field" placeholder="example@example.com">
+                    <input type="text" name="email" id="email-field" placeholder="example@example.com" autocomplete="off">
+                    <p id="email-warning"></p>
                 </div>
                 <div class="full-name">
                     <label for="full-name-field">Full name</label>
-                    <input type="text" name="full-name" id="full-name-field" placeholder="John Doe">
+                    <input type="text" name="full-name" id="full-name-field" placeholder="John Doe" autocomplete="off">
+                    <p id="full-name-warning"></p>
                 </div>
                 <div class="DOB">
                     <label for="DOB-field">Date of birth</label>
-                    <input type="date" name="DOB" id="DOB-field">
+                    <input type="date" name="DOB" id="DOB-field" autocomplete="off">
+                    <p id="DOB-warning"></p>
                 </div>
                 <div class="password">
                     <label for="password-field">Password</label>
-                    <input type="password" name="password" id="password-field" placeholder="password">
+                    <input type="password" name="password" id="password-field" placeholder="password" autocomplete="off">
+                    <p id="password-warning"></p>
                 </div>
                 <div class="submit">
                     <div></div>
@@ -37,5 +41,6 @@
                 <p>Already have an account?&nbsp&nbsp&nbsp<a href="login.html">login</a></p>
             </form>
         </div>
+        <script src="signin.js"></script>
     </body>
 </html>

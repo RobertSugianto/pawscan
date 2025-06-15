@@ -79,10 +79,18 @@ body img {
     cursor: pointer;
 }
 
-.signin-form p{
+.signin-form > p{
     font-size: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.signin-form #password-warning,
+.signin-form #DOB-warning,
+.signin-form #full-name-warning,
+.signin-form #email-warning {
+    display: none;
+    color: red;
 }
 
 .signin-form a {
