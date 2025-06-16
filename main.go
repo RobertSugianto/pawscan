@@ -16,9 +16,7 @@ func main() {
 
 
 	// handle css and js
-	http.Handle("/views/",
-	http.StripPrefix("/views/",
-		http.FileServer(http.Dir("views"))))
+	http.Handle("/views/", http.StripPrefix("/views/", http.FileServer(http.Dir("views"))))
 	
 
 	log.Println("Server running on http://localhost:8080")
