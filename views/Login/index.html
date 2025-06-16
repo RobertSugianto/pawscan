@@ -4,12 +4,12 @@
         <title>Sign In Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
+        <link href="views/Login/static/style.css" rel="stylesheet">
     </head>
     <body>
-        <img src="../Asset/dogLogin.png" alt="Dog Login">
+        <img src="views/Asset/dogLogin.png" alt="Dog Login">
         <div class="container">
-            <form action="home.html" method="POST" class="login-form" id="login-form">
+            <form action="/checklogin" method="POST" class="login-form" id="login-form">
                 <div class="login-title">
                     <h1>Welcome</h1>
                     <h4>Login with your account</h4>
@@ -31,9 +31,16 @@
                     </div>
                     <input type="submit" value="submit" id="submit-btn">
                 </div>
-                <p>Dont have an account?&nbsp&nbsp&nbsp<a href="signin.html">register now</a></p>
+                <p>Dont have an account?&nbsp&nbsp&nbsp<a href="/signin">register now</a></p>
             </form>
         </div>
-        <script src="script.js"></script>
+
+        {{if .Alert}}
+        <script>
+            alert("{{.Alert}}");
+        </script>
+        {{end}}
+
+        <script src="views/Login/static/script.js"></script>
     </body>
 </html>

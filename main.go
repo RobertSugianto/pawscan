@@ -4,15 +4,34 @@ import (
 	"log"
 	"net/http"
 	"pawscan/config"
+	"pawscan/controllers/homeController"
 	"pawscan/controllers/landingPageController"
+	"pawscan/controllers/loginController"
+	"pawscan/controllers/signinController"
+	"pawscan/session"
+
+	"github.com/gorilla/sessions"
 )
 
 func main() {
+	session.Store = sessions.NewCookieStore([]byte("super-secret-key"))
+	session.SessionName = "pawscan-session"
+
 	config.ConnectDB()
 	log.Println("Connection is established, continue to opening port")
 
 	// 1. Landing Page
 	http.HandleFunc("/", landingPageController.Welcome)
+
+	// 2. Login Page
+	http.HandleFunc("/login", loginController.Index)
+	http.HandleFunc("/checklogin", loginController.CheckLogin)
+
+	// 3. Signin Page
+	http.HandleFunc("/signin", signinController.Index)
+
+	// 4. home Page
+	http.HandleFunc("/home", homeController.Index)
 
 
 	// handle css and js
