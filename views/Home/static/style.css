@@ -110,7 +110,7 @@ body {
         rgba(0, 0, 0, 0.4) 60%,
         rgba(0, 0, 0, 0.8) 85%,
         rgba(0, 0, 0, 1) 100%
-        ), url(../Asset/anjing.jpg);
+        ), url("/views/Asset/anjing.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
