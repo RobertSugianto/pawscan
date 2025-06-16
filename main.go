@@ -17,7 +17,6 @@ func main() {
 
 	// handle css and js
 	http.Handle("/views/", http.StripPrefix("/views/", http.FileServer(http.Dir("views"))))
-	
 
 	log.Println("Server running on http://localhost:8080")
 	log.Println("Other url can be found on http://127.0.0.1:8080")
