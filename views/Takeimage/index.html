@@ -29,7 +29,7 @@
     </header>
     <main>
         <div class="container">
-            <form action="hasil.html" method="POST" class="addImagePred">
+            <form action="/predict" method="POST" class="addImagePred" enctype="multipart/form-data">
                 <div class="imgInsert">
                     <label for="getImg">
                         <img src="/views/Asset/addImg.png" alt="plus img" class="uploadImage">
@@ -38,7 +38,7 @@
                     <div class="submit">
                         <h1>Upload Image</h1>
                         <input type="submit" value="submit">
-                        <a href="home.html">Back</a>
+                        <a href="/home">Back</a>
                     </div>
                 </div>
             </form>

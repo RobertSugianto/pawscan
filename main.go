@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"pawscan/config"
+	"pawscan/controllers/hasilController"
 	"pawscan/controllers/homeController"
 	"pawscan/controllers/landingPageController"
 	"pawscan/controllers/loginController"
@@ -36,6 +37,10 @@ func main() {
 
 	// 5. Take Image
 	http.HandleFunc("/takeimage", takeimageController.Index)
+	http.HandleFunc("/predict", takeimageController.HandlePrediction)
+
+	// 5. Hasil
+	http.HandleFunc("/result", hasilController.Index)
 
 
 	// handle css and js

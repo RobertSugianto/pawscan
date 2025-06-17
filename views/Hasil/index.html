@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/views/Hasil/static/style.css">
 </head>
 <body>
     <header>
@@ -20,8 +20,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="home.html#tutorial">How It Works</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home#tutorial">How It Works</a></li>
                 <li><a href="history.html">My Scans</a></li>
                 <li><a href="login.html" class="active">Sign In</a></li>
             </ul>
@@ -31,17 +31,20 @@
     <main>
         <div class="container">
             <div class="top-section">
-                <div class="snake-image-container"><img src="../Asset/golden.jpeg" class="snake-image"></div>
-                <div class="snake-info">
-                    <h2>Golden Retriever</h2>
-                    <p class="sci-name">Nama Ilmiah : <em>Canis lupus familiaris</em></p>
-                    <p class="snake-type">Jenis: Friendly</p>
+                <div class="dog-image-container">
+                    <img src="{{.ImageBase64}}" class="dog-image" alt="Predicted Dog Image">
+                </div>
+                <div class="dog-info">
+                    <h2>{{.BreedName}}</h2>
+                    <p><strong>Origin:</strong> {{.Origin}}</p>
+                    <p><strong>Type:</strong> {{.Type}}</p>
+                    <p><strong>Size:</strong> {{.Size}}</p>
+                    <p><strong>Confidence:</strong> {{printf "%.2f" .Confidence}}%</p>
                 </div>
             </div>
 
-            <div class="snake-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div class="dog-desc">
+                <p>{{.Description}}</p>
             </div>
             <div class="button-container">
                 <button onclick="window.location.href='home.html'" class="back-button">Back</button>
@@ -59,8 +62,8 @@
             <div class="footer-menu">
                 <h3>Main Menu</h3>
                 <ul>
-                    <li><a href="home.html#intro">Home</a></li>
-                    <li><a href="home.html#tutorial">Service</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/home#tutorial">Service</a></li>
                     <li><a href="history.html">My Scans</a></li>
                 </ul>
             </div>
@@ -71,9 +74,9 @@
                 <p><span class="icon">&#128205;</span> Jl. Pahlawan Seribu No.123, Tangerang Selatan – Banten, 15310</p>
                 <br>
                 <div class="social-icons">
-                    <a href="#"><img src="../Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
-                    <a href="#"><img src="../Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
-                    <a href="#"><img src="../Asset/X.png" alt="Twitter" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/X.png" alt="Twitter" class="social-icon"></a>
                 </div>
             </div>
         </div>
