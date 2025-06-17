@@ -9,7 +9,7 @@
     <body>
         <img src="/views/Asset/dogLogin.png" alt="Dog signin">
         <div class="container">
-            <form action="home.html" method="POST" class="signin-form" id="signin-form">
+            <form action="/checksignin" method="POST" class="signin-form" id="signin-form">
                 <div class="signin-title">
                     <h1>Welcome</h1>
                     <h4>Sign in with your account</h4>
@@ -24,11 +24,6 @@
                     <input type="text" name="full-name" id="full-name-field" placeholder="John Doe" autocomplete="off">
                     <p id="full-name-warning"></p>
                 </div>
-                <div class="DOB">
-                    <label for="DOB-field">Date of birth</label>
-                    <input type="date" name="DOB" id="DOB-field" autocomplete="off">
-                    <p id="DOB-warning"></p>
-                </div>
                 <div class="password">
                     <label for="password-field">Password</label>
                     <input type="password" name="password" id="password-field" placeholder="password" autocomplete="off">
@@ -41,6 +36,15 @@
                 <p>Already have an account?&nbsp&nbsp&nbsp<a href="/login">login</a></p>
             </form>
         </div>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+
+            if (error === 'email_exists') {
+                alert("Email already exists. Please use a different email.");
+            }
+        </script>
+
         <script src="/views/Signin/static/script.js"></script>
     </body>
 </html>

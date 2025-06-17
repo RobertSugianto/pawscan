@@ -30,9 +30,10 @@ func main() {
 	// 2. Login Page
 	http.HandleFunc("/login", loginController.Index)
 	http.HandleFunc("/checklogin", loginController.CheckLogin)
-
+	
 	// 3. Signin Page
 	http.HandleFunc("/signin", signinController.Index)
+	http.HandleFunc("/checksignin", signinController.SignIn)
 
 	// 4. home Page
 	http.HandleFunc("/home", homeController.Index)
@@ -49,6 +50,7 @@ func main() {
 
 	// 7. Logout
 	http.HandleFunc("/logout", authController.Logout)
+
 
 
 	// handle css and js

@@ -25,3 +25,25 @@ func GetUserById(userID uint) entities.MsUser {
 
 	return user
 }
+
+func IsEmailExist(email string) bool {
+	query := `SELECT COUNT(*) FROM msUser WHERE UserEmail = $1`
+	var count int
+	err := config.DB.QueryRow(query, email).Scan(&count)
+	return err == nil && count > 0
+}
+
+func InsertUser(user entities.MsUser) uint {
+	query := `
+		INSERT INTO msUser(UserName, UserEmail, UserPassword)
+		VALUES ($1, $2, $3) RETURNING UserID
+	`
+
+	var newID uint
+	err := config.DB.QueryRow(query, user.Name, user.Email, user.Password).Scan(&newID)
+	if err != nil {
+		return 0
+	}
+
+	return newID
+}
