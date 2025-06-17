@@ -8,6 +8,7 @@ import (
 	"pawscan/controllers/landingPageController"
 	"pawscan/controllers/loginController"
 	"pawscan/controllers/signinController"
+	"pawscan/controllers/takeimageController"
 	"pawscan/session"
 
 	"github.com/gorilla/sessions"
@@ -32,6 +33,9 @@ func main() {
 
 	// 4. home Page
 	http.HandleFunc("/home", homeController.Index)
+
+	// 5. Take Image
+	http.HandleFunc("/takeimage", takeimageController.Index)
 
 
 	// handle css and js

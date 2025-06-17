@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/views/Takeimage/static/style.css">
 </head>
 <body>
     <header>
@@ -20,8 +20,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="home.html#tutorial">How It Works</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home#tutorial">How It Works</a></li>
                 <li><a href="history.html">My Scans</a></li>
                 <li><a href="login.html" class="active">Sign In</a></li>
             </ul>
@@ -32,8 +32,9 @@
             <form action="hasil.html" method="POST" class="addImagePred">
                 <div class="imgInsert">
                     <label for="getImg">
-                        <img src="../Asset/addImg.png" alt="plus img">
+                        <img src="/views/Asset/addImg.png" alt="plus img" class="uploadImage">
                     </label>
+                    <input type="file" name="getImg" id="getImg" style="display: none;" accept="image/*" onchange="preview_image(event)">
                     <div class="submit">
                         <h1>Upload Image</h1>
                         <input type="submit" value="submit">
@@ -53,8 +54,8 @@
             <div class="footer-menu">
                 <h3>Main Menu</h3>
                 <ul>
-                    <li><a href="home.html#intro">Home</a></li>
-                    <li><a href="home.html#tutorial">Service</a></li>
+                    <li><a href="/home#intro">Home</a></li>
+                    <li><a href="/home#tutorial">Service</a></li>
                     <li><a href="history.html">My Scans</a></li>
                 </ul>
             </div>
@@ -65,9 +66,9 @@
                 <p><span class="icon">&#128205;</span> Jl. Pahlawan Seribu No.123, Tangerang Selatan – Banten, 15310</p>
                 <br>
                 <div class="social-icons">
-                    <a href="#"><img src="../Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
-                    <a href="#"><img src="../Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
-                    <a href="#"><img src="../Asset/X.png" alt="Twitter" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/X.png" alt="Twitter" class="social-icon"></a>
                 </div>
             </div>
         </div>
@@ -75,5 +76,6 @@
             <p>&copy; 2025 PawScan| All rights reserved</p>
         </div>
     </footer>
+    <script src="/views/Takeimage/static/script.js"></script>
 </body>
 </html>

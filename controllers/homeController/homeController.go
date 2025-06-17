@@ -2,6 +2,7 @@ package homeController
 
 import (
 	"net/http"
+	"pawscan/entities"
 	"pawscan/session"
 	"text/template"
 )
@@ -29,8 +30,9 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	data := map[string]interface{}{
-		"UserName": sess.Values["userName"],
+	data := entities.MsUser{
+		Id:    sess.Values["userID"].(uint),
+		Name:  sess.Values["userName"].(string),
 	}
 	tmpl.Execute(w, data)
 }

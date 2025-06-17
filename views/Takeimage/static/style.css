@@ -82,7 +82,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../Asset/anjinghasil.jpg");
+    background-image: url("/views/Asset/anjinghasil.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -116,6 +116,13 @@ main{
     align-items: center;
     width: 100%;
     gap: 2vh;
+}
+
+.uploadImage {
+    width: 30vw;
+    height: 49.5vh;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .submit h1 {
