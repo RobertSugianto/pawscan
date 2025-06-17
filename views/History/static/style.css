@@ -96,6 +96,42 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    padding-bottom: 5vh;
+}
+
+.content-container .found-container {
+    display: flex;
+    background-color: #fbbf24;
+    padding: 3vh 3vw;
+    gap: 5vw;
+    width: 70vw;
+}
+
+.found-container .input-img {
+    width: 30%;
+}
+
+.found-container img {
+    width: 17vw;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.found-container .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+}
+
+.found-container .description h3 {
+    font-size: 3rem;
+}
+
+.found-container .description p {
+    font-size: 1rem;
 }
 
 .not-found-container{

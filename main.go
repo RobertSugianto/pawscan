@@ -4,7 +4,9 @@ import (
 	"log"
 	"net/http"
 	"pawscan/config"
+	"pawscan/controllers/authController"
 	"pawscan/controllers/hasilController"
+	"pawscan/controllers/historyController"
 	"pawscan/controllers/homeController"
 	"pawscan/controllers/landingPageController"
 	"pawscan/controllers/loginController"
@@ -41,6 +43,12 @@ func main() {
 
 	// 5. Hasil
 	http.HandleFunc("/result", hasilController.Index)
+
+	// 6. History
+	http.HandleFunc("/history", historyController.Index)
+
+	// 7. Logout
+	http.HandleFunc("/logout", authController.Logout)
 
 
 	// handle css and js

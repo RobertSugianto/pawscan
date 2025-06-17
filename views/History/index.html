@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Not Found</title>
+    <title>History</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/views/History/static/style.css">
 </head>
 <body>
     <header>
@@ -19,10 +19,10 @@
         </div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="home.html#tutorial">How It Works</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home#tutorial">How It Works</a></li>
                 <li><a href="history.html">My Scans</a></li>
-                <li><a href="login.html" class="active">Sign In</a></li>
+                <li><a href="/logout" class="active">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -32,17 +32,33 @@
                 Snap History
         </div>
         <div class="content-container">
-            <div class="not-found-container">
+            {{ range . }}
+            <!-- Prediction history available -->
+            <div class="found-container">
+                <div class="input-img">
+                    <img src="data:image/jpeg;base64,{{ .Base64Image }}" alt="image input">
+                </div>
+                <div class="description">
+                    <h3>{{ .Breed.Name }}</h3>
+                    <p>Origin: {{ .Breed.Origin.Name }}</p>
+                    <p>Type: {{ .Breed.Type.Name }}</p>
+                    <p>Size: {{ .Breed.Size.Name }}</p>
+                    <p>Confidence: {{ printf "%.2f" .Confidence }}%</p>
+                </div>
+            </div>
+            {{ else }}
+            <!-- No prediction history -->
+             <div class="not-found-container">
                 <div class="logo-not-found">
-                    <img src="../Asset/search.png" class="search-icon" alt="search">
+                    <img src="views/Asset/search.png" class="search-icon" alt="search">
                 </div>
                 <div class="not-found">
                     Not Found!
                 </div>
             </div>
-            
+            {{ end }}
             <div class="button-container">
-                <a href="home.html" class="back-button">Back</a>
+                <a href="/home" class="back-button">Back</a>
             </div>
         </div>
     </main>
@@ -57,9 +73,9 @@
             <div class="footer-menu">
                 <h3>Main Menu</h3>
                 <ul>
-                    <li><a href="home.html#intro">Home</a></li>
-                    <li><a href="home.html#tutorial">Service</a></li>
-                    <li><a href="history.html">My Scans</a></li>
+                    <li><a href="/home#intro">Home</a></li>
+                    <li><a href="/home#tutorial">Service</a></li>
+                    <li><a href="/history">My Scans</a></li>
                 </ul>
             </div>
             <div class="contact-info">
@@ -69,9 +85,9 @@
                 <p><span class="icon">&#128205;</span> Jl. Pahlawan Seribu No.123, Tangerang Selatan – Banten, 15310</p>
                 <br>
                 <div class="social-icons">
-                    <a href="#"><img src="../Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
-                    <a href="#"><img src="../Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
-                    <a href="#"><img src="../Asset/X.png" alt="Twitter" class="social-icon"></a>
+                    <a href="#"><img src="views/Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="views/Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="views/Asset/X.png" alt="Twitter" class="social-icon"></a>
                 </div>
             </div>
         </div>
