@@ -44,12 +44,9 @@ def predict_api():
     print("Received image:", file.filename)
 
     vec = img2vec.get_vec(image, tensor=True).flatten().unsqueeze(0).to(device)
-    print("Vector shape:", vec.shape)
-    print("Vector sample:", vec[0, :10])
 
     with torch.no_grad():
         output = model(vec)
-        print("Model raw output:", output)
         predicted_class = torch.argmax(output, dim=1).item()
         confidence = torch.softmax(output, dim=1)[0][predicted_class].item()
 
@@ -57,9 +54,8 @@ def predict_api():
 
         return jsonify({
             "class": predicted_class,
-            "confidence": round(confidence, 4)
+            "confidence": round(confidence, 4) *100
         })
 
 if __name__ == '__main__':
-    print("🔧 Flask server running on http://localhost:5000")
     app.run(host='0.0.0.0', port=5000)
