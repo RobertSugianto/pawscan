@@ -54,7 +54,7 @@ def predict_api():
 
         return jsonify({
             "class": predicted_class,
-            "confidence": round(confidence, 4) *100
+            "confidence": round(confidence, 4)
         })
 
 if __name__ == '__main__':
