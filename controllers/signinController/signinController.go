@@ -38,7 +38,7 @@ func SignIn(w http.ResponseWriter, r *http.Request) {
 	user := entities.MsUser{
 		Name:     fullName,
 		Email:    email,
-		Password: password, // consider hashing for production
+		Password: password,
 	}
 
 	// Insert into DB
