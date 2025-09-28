@@ -35,4 +35,8 @@ DB_USER= [your_postgres_user] \
 DB_PASSWORD=[your_postgress_password] \
 DB_NAME=pawscan \
 \
-SESSION_SECRET=robert123
+SESSION_SECRET= [create_session_secret_password] \
+\
+after adding .env, you must run go and python in terminal by writing
+1. go run main.go (in one terminal)
+2. python ai/predict.py (in another teminal)
